@@ -3,3 +3,11 @@ C:\Workspace\Mvc Core Northwind\mvc-core-northwind\NorthwindBackend\DataAccess\b
 C:\Workspace\Mvc Core Northwind\mvc-core-northwind\NorthwindBackend\DataAccess\obj\Debug\netstandard2.0\DataAccess.csprojAssemblyReference.cache
 C:\Workspace\Mvc Core Northwind\mvc-core-northwind\NorthwindBackend\DataAccess\obj\Debug\netstandard2.0\DataAccess.AssemblyInfoInputs.cache
 C:\Workspace\Mvc Core Northwind\mvc-core-northwind\NorthwindBackend\DataAccess\obj\Debug\netstandard2.0\DataAccess.AssemblyInfo.cs
+C:\Workspace\Mvc Core Northwind\mvc-core-northwind\NorthwindBackend\DataAccess\bin\Debug\netstandard2.0\DataAccess.deps.json
+C:\Workspace\Mvc Core Northwind\mvc-core-northwind\NorthwindBackend\DataAccess\bin\Debug\netstandard2.0\DataAccess.dll
+C:\Workspace\Mvc Core Northwind\mvc-core-northwind\NorthwindBackend\DataAccess\bin\Debug\netstandard2.0\DataAccess.pdb
+C:\Workspace\Mvc Core Northwind\mvc-core-northwind\NorthwindBackend\DataAccess\bin\Debug\netstandard2.0\Core.pdb
+C:\Workspace\Mvc Core Northwind\mvc-core-northwind\NorthwindBackend\DataAccess\bin\Debug\netstandard2.0\Entities.pdb
+C:\Workspace\Mvc Core Northwind\mvc-core-northwind\NorthwindBackend\DataAccess\obj\Debug\netstandard2.0\DataAccess.csproj.CopyComplete
+C:\Workspace\Mvc Core Northwind\mvc-core-northwind\NorthwindBackend\DataAccess\obj\Debug\netstandard2.0\DataAccess.dll
+C:\Workspace\Mvc Core Northwind\mvc-core-northwind\NorthwindBackend\DataAccess\obj\Debug\netstandard2.0\DataAccess.pdb
