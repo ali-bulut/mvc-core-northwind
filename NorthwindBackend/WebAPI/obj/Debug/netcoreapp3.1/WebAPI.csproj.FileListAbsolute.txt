@@ -129,4 +129,11 @@ C:\Workspace\Mvc Core Northwind\mvc-core-northwind\NorthwindBackend\WebAPI\bin\D
 C:\Workspace\Mvc Core Northwind\mvc-core-northwind\NorthwindBackend\WebAPI\bin\Debug\netcoreapp3.1\DataAccess.pdb
 C:\Workspace\Mvc Core Northwind\mvc-core-northwind\NorthwindBackend\WebAPI\bin\Debug\netcoreapp3.1\Entities.pdb
 C:\Workspace\Mvc Core Northwind\mvc-core-northwind\NorthwindBackend\WebAPI\bin\Debug\netcoreapp3.1\Autofac.Extensions.DependencyInjection.dll
+C:\Workspace\Mvc Core Northwind\mvc-core-northwind\NorthwindBackend\WebAPI\bin\Debug\netcoreapp3.1\Microsoft.IdentityModel.JsonWebTokens.dll
+C:\Workspace\Mvc Core Northwind\mvc-core-northwind\NorthwindBackend\WebAPI\bin\Debug\netcoreapp3.1\Microsoft.IdentityModel.Logging.dll
+C:\Workspace\Mvc Core Northwind\mvc-core-northwind\NorthwindBackend\WebAPI\bin\Debug\netcoreapp3.1\Microsoft.IdentityModel.Tokens.dll
+C:\Workspace\Mvc Core Northwind\mvc-core-northwind\NorthwindBackend\WebAPI\bin\Debug\netcoreapp3.1\System.IdentityModel.Tokens.Jwt.dll
+C:\Workspace\Mvc Core Northwind\mvc-core-northwind\NorthwindBackend\WebAPI\bin\Debug\netcoreapp3.1\Microsoft.AspNetCore.Authentication.JwtBearer.dll
+C:\Workspace\Mvc Core Northwind\mvc-core-northwind\NorthwindBackend\WebAPI\bin\Debug\netcoreapp3.1\Microsoft.IdentityModel.Protocols.dll
+C:\Workspace\Mvc Core Northwind\mvc-core-northwind\NorthwindBackend\WebAPI\bin\Debug\netcoreapp3.1\Microsoft.IdentityModel.Protocols.OpenIdConnect.dll
 C:\Workspace\Mvc Core Northwind\mvc-core-northwind\NorthwindBackend\WebAPI\obj\Debug\netcoreapp3.1\WebAPI.MvcApplicationPartsAssemblyInfo.cache
