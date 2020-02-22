@@ -5,6 +5,7 @@ using System.Text;
 using Business.Abstract;
 using Business.Constants;
 using Business.ValidationRules.FluentValidation;
+using Core.Aspects.Autofac.Caching;
 using Core.Aspects.Autofac.Transaction;
 using Core.Aspects.Autofac.Validation;
 using Core.CrossCuttingConcerns.Validation.FluentValidation;
@@ -34,6 +35,7 @@ namespace Business.Concrete
             return new SuccessDataResult<List<Product>>(_productDal.GetList().ToList());
         }
 
+        [CacheAspect(duration:10)]
         public IDataResult<List<Product>> GetListByCategory(int categoryId)
         {
             return new SuccessDataResult<List<Product>>(_productDal.GetList(p => p.CategoryId == categoryId).ToList());
@@ -47,6 +49,9 @@ namespace Business.Concrete
 
 
         [ValidationAspect(typeof(ProductValidator),Priority = 1)]
+        //eğer Add işlemi başarıyla gerçekleştiyse içinde IProductService.Get geçen tüm cache'leri siler.
+        //örn; getbyid, getlistbycategory, getlist gibi (yukarıdaki methodlar)
+        [CacheRemoveAspect("IProductService.Get")]
         public IResult Add(Product product)
         {
             //tabiki bunu her method için ayrı ayrı uygulamamak için base bir sınıfa çekiyoruz.
