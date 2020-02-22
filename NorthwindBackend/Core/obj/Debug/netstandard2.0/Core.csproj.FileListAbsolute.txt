@@ -5,3 +5,4 @@ C:\Workspace\Mvc Core Northwind\mvc-core-northwind\NorthwindBackend\Core\obj\Deb
 C:\Workspace\Mvc Core Northwind\mvc-core-northwind\NorthwindBackend\Core\bin\Debug\netstandard2.0\Core.pdb
 C:\Workspace\Mvc Core Northwind\mvc-core-northwind\NorthwindBackend\Core\obj\Debug\netstandard2.0\Core.dll
 C:\Workspace\Mvc Core Northwind\mvc-core-northwind\NorthwindBackend\Core\obj\Debug\netstandard2.0\Core.pdb
+C:\Workspace\Mvc Core Northwind\mvc-core-northwind\NorthwindBackend\Core\obj\Debug\netstandard2.0\Core.csprojAssemblyReference.cache
