@@ -5,6 +5,7 @@ using System.Text;
 using Business.Abstract;
 using Business.Constants;
 using Business.ValidationRules.FluentValidation;
+using Core.Aspects.Autofac.Transaction;
 using Core.Aspects.Autofac.Validation;
 using Core.CrossCuttingConcerns.Validation.FluentValidation;
 using Core.Utilities.Results;
@@ -44,6 +45,7 @@ namespace Business.Concrete
 
         //bu tarz işlemlerin hepsi business'ta yapılmalı
 
+
         [ValidationAspect(typeof(ProductValidator),Priority = 1)]
         public IResult Add(Product product)
         {
@@ -79,6 +81,19 @@ namespace Business.Concrete
         public IResult Update(Product product)
         {
             _productDal.Update(product);
+            return new SuccessResult(Messages.ProductUpdated);
+        }
+
+        [TransactionScopeAspect]
+        public IResult TransactionalOperation(Product product)
+        {
+            //transaction'ın kullanım amacı;
+            //eğer db işlemlerinde insert update delete gibi 
+            //birinde herhangi bir hata alınırsa öncesinde yapılan tüm işlemleri geri alır.
+            //örn bu durumda önce ürünü hatasız güncelleyip daha sonra ekleme yaparken hata alırsa
+            //güncellenmiş ürünü eski haline çevirir yani güncelleme geçersiz sayılır.
+            _productDal.Update(product);
+            _productDal.Add(product);
             return new SuccessResult(Messages.ProductUpdated);
         }
     }

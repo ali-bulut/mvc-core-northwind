@@ -5,7 +5,7 @@ using Castle.DynamicProxy;
 
 namespace Core.Utilities.Interceptors.Autofac
 {
-    //IInterceptor'ı kullanmamız için castle.dynamicproxy package'ını kurmamız lazım.
+    //IInterceptor'ı kullanmamız için autofac.extras.dynamicproxy package'ını kurmamız lazım.
     //classlar'da, methodlar'da ve istenirse bir method için birden fazla ve son olarak inherit edildiği alt classlarda
     //kullanılabilir.
     [AttributeUsage(AttributeTargets.Class|AttributeTargets.Method,AllowMultiple = true,Inherited = true)]
