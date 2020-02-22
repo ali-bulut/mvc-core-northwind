@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Text;
-using Castle.Core.Interceptor;
+using Castle.DynamicProxy;
 
 namespace Core.Utilities.Interceptors.Autofac
 {
@@ -26,7 +26,7 @@ namespace Core.Utilities.Interceptors.Autofac
                 //invocation methodunu çalıştır demek.
                 invocation.Proceed();
             }
-            catch (Exception e)
+            catch (Exception)
             {
                 isSuccess = false;
                 OnException(invocation);

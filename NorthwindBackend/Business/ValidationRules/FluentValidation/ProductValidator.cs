@@ -34,7 +34,7 @@ namespace Business.ValidationRules.FluentValidation
             //bu şekilde kendi validation'ımızı da oluşturabiliriz.
             //Method olarak göstermedik yani StartWithA("blabla") şeklinde çünkü fluent bunu bizim için yapıyor.
             //parametre olarak direkt p.ProductName'i gönderiyor.
-            RuleFor(p => p.ProductName).Must(StartWithA);
+            //RuleFor(p => p.ProductName).Must(StartWithA).WithMessage("Product Name must be start with 'A' !");
         }
 
         private bool StartWithA(string arg)

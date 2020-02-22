@@ -5,6 +5,7 @@ using System.Text;
 using Business.Abstract;
 using Business.Constants;
 using Business.ValidationRules.FluentValidation;
+using Core.Aspects.Autofac.Validation;
 using Core.CrossCuttingConcerns.Validation.FluentValidation;
 using Core.Utilities.Results;
 using DataAccess.Abstract;
@@ -43,7 +44,7 @@ namespace Business.Concrete
 
         //bu tarz işlemlerin hepsi business'ta yapılmalı
 
-        //[ValidationAspect(typeof(ProductValidator))]
+        [ValidationAspect(typeof(ProductValidator),Priority = 1)]
         public IResult Add(Product product)
         {
             //tabiki bunu her method için ayrı ayrı uygulamamak için base bir sınıfa çekiyoruz.
