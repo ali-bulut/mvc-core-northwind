@@ -137,3 +137,4 @@ C:\Workspace\Mvc Core Northwind\mvc-core-northwind\NorthwindBackend\WebAPI\bin\D
 C:\Workspace\Mvc Core Northwind\mvc-core-northwind\NorthwindBackend\WebAPI\bin\Debug\netcoreapp3.1\Microsoft.IdentityModel.Protocols.dll
 C:\Workspace\Mvc Core Northwind\mvc-core-northwind\NorthwindBackend\WebAPI\bin\Debug\netcoreapp3.1\Microsoft.IdentityModel.Protocols.OpenIdConnect.dll
 C:\Workspace\Mvc Core Northwind\mvc-core-northwind\NorthwindBackend\WebAPI\obj\Debug\netcoreapp3.1\WebAPI.MvcApplicationPartsAssemblyInfo.cache
+C:\Workspace\Mvc Core Northwind\mvc-core-northwind\NorthwindBackend\WebAPI\bin\Debug\netcoreapp3.1\FluentValidation.dll

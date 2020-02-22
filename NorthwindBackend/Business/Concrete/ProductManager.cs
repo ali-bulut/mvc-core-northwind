@@ -4,9 +4,12 @@ using System.Linq;
 using System.Text;
 using Business.Abstract;
 using Business.Constants;
+using Business.ValidationRules.FluentValidation;
+using Core.CrossCuttingConcerns.Validation.FluentValidation;
 using Core.Utilities.Results;
 using DataAccess.Abstract;
 using Entities.Concrete;
+using FluentValidation;
 
 namespace Business.Concrete
 {
@@ -34,8 +37,31 @@ namespace Business.Concrete
             return new SuccessDataResult<List<Product>>(_productDal.GetList(p => p.CategoryId == categoryId).ToList());
         }
 
+        //Cross Cutting Concerns -> Validation, Cache, Log, Performance, Auth, Transaction
+        //AOP -> Aspect Orianted Programming  Cross Cutting Concern'ler için kullanılır.
+        //Cross Cutting Concerns işlemleri dışında kesinlikle AOP kullanılmamalıdır.
+
+        //bu tarz işlemlerin hepsi business'ta yapılmalı
+
+        //[ValidationAspect(typeof(ProductValidator))]
         public IResult Add(Product product)
         {
+            //tabiki bunu her method için ayrı ayrı uygulamamak için base bir sınıfa çekiyoruz.
+            //Core layer'ı altında ValidationTool classına çektik.
+            //ProductValidator productValidator = new ProductValidator();
+            //var result = productValidator.Validate(product);
+            //if (!result.IsValid)
+            //{
+            //    burada FluentValidation'ının base hata mesajları gösterilir. 
+            //    eğer biz withMessage ile kendimiz hata mesajı eklemişsek o gözükür.
+            //    throw new ValidationException(result.Errors);
+            //}
+
+            //bu şekilde de kullanabiliriz fakat direkt methodun üzerinde attribute olarak vermek daha iyidir.
+            //ValidationTool.Validate(new ProductValidator(), product);
+
+
+
             //Business codes
             //örn daha önce eklenen ismin bir daha eklenmemesi gibi
             //yada validation kodları business katmanına yazılır.
