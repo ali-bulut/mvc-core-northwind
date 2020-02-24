@@ -15,6 +15,7 @@ using Core.Aspects.Autofac.Transaction;
 using Core.Aspects.Autofac.Validation;
 using Core.CrossCuttingConcerns.Logging.Log4Net.Loggers;
 using Core.CrossCuttingConcerns.Validation.FluentValidation;
+using Core.Utilities.Business;
 using Core.Utilities.Results;
 using DataAccess.Abstract;
 using Entities.Concrete;
@@ -23,9 +24,12 @@ using Microsoft.AspNetCore.Http;
 
 namespace Business.Concrete
 {
-    public class ProductManager:IProductService
+    public class ProductManager : IProductService
     {
         private IProductDal _productDal;
+        //eğer birden fazla servis kullanma ihtiyacı oluşursa bu şekilde kullanabiliriz.
+        //dal'ı çağırmak yerine direkt service'i çağırıp daha sonra injection işlemini yapıp service'i kullanabiliriz.
+        //private ICategoryService _categoryService;
 
         public ProductManager(IProductDal productDal)
         {
@@ -48,7 +52,7 @@ namespace Business.Concrete
 
         [SecuredOperation("Product.List,Admin")]
         [LogAspect(typeof(FileLogger))]
-        [CacheAspect(duration:10)]
+        [CacheAspect(duration: 10)]
         public IDataResult<List<Product>> GetListByCategory(int categoryId)
         {
             return new SuccessDataResult<List<Product>>(_productDal.GetList(p => p.CategoryId == categoryId).ToList());
@@ -61,7 +65,7 @@ namespace Business.Concrete
         //bu tarz işlemlerin hepsi business'ta yapılmalı
 
 
-        [ValidationAspect(typeof(ProductValidator),Priority = 1)]
+        [ValidationAspect(typeof(ProductValidator), Priority = 1)]
         //eğer Add işlemi başarıyla gerçekleştiyse içinde IProductService.Get geçen tüm cache'leri siler.
         //örn; getbyid, getlistbycategory, getlist gibi (yukarıdaki methodlar)
         [CacheRemoveAspect("IProductService.Get")]
@@ -86,8 +90,28 @@ namespace Business.Concrete
             //Business codes
             //örn daha önce eklenen ismin bir daha eklenmemesi gibi
             //yada validation kodları business katmanına yazılır.
+
+
+
+            IResult result = BusinessRules.Run(CheckIfProductNameExists(product.ProductName));
+            if (result != null)
+            {
+                return result;
+            }
+
             _productDal.Add(product);
-            return new SuccessResult(Messages.ProductAdded); 
+            return new SuccessResult(Messages.ProductAdded);
+        }
+
+        private IResult CheckIfProductNameExists(string productName)
+        {
+            var result = _productDal.GetList(p => p.ProductName == productName).Any();
+            if (result)
+            {
+                return new ErrorResult(Messages.ProductNameAlreadyExists);
+            }
+
+            return new SuccessResult();
         }
 
         public IResult Delete(Product product)
