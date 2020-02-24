@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 using Business.Abstract;
+using Core.Extensions;
 using Entities.Concrete;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Http;
@@ -22,7 +23,8 @@ namespace WebAPI.Controllers
         }
 
         [HttpGet("getall")]
-        [Authorize(Roles="Product.List")]
+        //authorize işlemi sadece business'ta yapılmalı!
+        //[Authorize(Roles="Product.List")]
         public IActionResult GetList()
         {
             var result = _productService.GetList();
