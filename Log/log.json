@@ -1,0 +1,48 @@
+{
+  "Message": {
+    "MethodName": "GetListByCategory",
+    "LogParameters": [
+      {
+        "Name": "categoryId",
+        "Value": 1,
+        "Type": "Int32"
+      }
+    ]
+  }
+}
+{
+  "Message": {
+    "MethodName": "GetListByCategory",
+    "LogParameters": [
+      {
+        "Name": "categoryId",
+        "Value": 2,
+        "Type": "Int32"
+      }
+    ]
+  }
+}
+{
+  "Message": {
+    "MethodName": "GetListByCategory",
+    "LogParameters": [
+      {
+        "Name": "categoryId",
+        "Value": 4,
+        "Type": "Int32"
+      }
+    ]
+  }
+}
+{
+  "Message": {
+    "MethodName": "GetListByCategory",
+    "LogParameters": [
+      {
+        "Name": "categoryId",
+        "Value": 4,
+        "Type": "Int32"
+      }
+    ]
+  }
+}

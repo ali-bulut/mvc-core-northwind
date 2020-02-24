@@ -136,7 +136,13 @@ C:\Workspace\Mvc Core Northwind\mvc-core-northwind\NorthwindBackend\WebAPI\bin\D
 C:\Workspace\Mvc Core Northwind\mvc-core-northwind\NorthwindBackend\WebAPI\bin\Debug\netcoreapp3.1\Microsoft.AspNetCore.Authentication.JwtBearer.dll
 C:\Workspace\Mvc Core Northwind\mvc-core-northwind\NorthwindBackend\WebAPI\bin\Debug\netcoreapp3.1\Microsoft.IdentityModel.Protocols.dll
 C:\Workspace\Mvc Core Northwind\mvc-core-northwind\NorthwindBackend\WebAPI\bin\Debug\netcoreapp3.1\Microsoft.IdentityModel.Protocols.OpenIdConnect.dll
-C:\Workspace\Mvc Core Northwind\mvc-core-northwind\NorthwindBackend\WebAPI\obj\Debug\netcoreapp3.1\WebAPI.MvcApplicationPartsAssemblyInfo.cache
 C:\Workspace\Mvc Core Northwind\mvc-core-northwind\NorthwindBackend\WebAPI\bin\Debug\netcoreapp3.1\FluentValidation.dll
 C:\Workspace\Mvc Core Northwind\mvc-core-northwind\NorthwindBackend\WebAPI\bin\Debug\netcoreapp3.1\Autofac.Extras.DynamicProxy.dll
 C:\Workspace\Mvc Core Northwind\mvc-core-northwind\NorthwindBackend\WebAPI\bin\Debug\netcoreapp3.1\Castle.Core.dll
+C:\Workspace\Mvc Core Northwind\mvc-core-northwind\NorthwindBackend\WebAPI\bin\Debug\netcoreapp3.1\log4net.config
+C:\Workspace\Mvc Core Northwind\mvc-core-northwind\NorthwindBackend\WebAPI\bin\Debug\netcoreapp3.1\log4net.dll
+C:\Workspace\Mvc Core Northwind\mvc-core-northwind\NorthwindBackend\WebAPI\bin\Debug\netcoreapp3.1\MicroKnights.Log4NetAdoNetAppender.dll
+C:\Workspace\Mvc Core Northwind\mvc-core-northwind\NorthwindBackend\WebAPI\bin\Debug\netcoreapp3.1\System.Data.SqlClient.dll
+C:\Workspace\Mvc Core Northwind\mvc-core-northwind\NorthwindBackend\WebAPI\bin\Debug\netcoreapp3.1\runtimes\unix\lib\netstandard2.0\System.Data.SqlClient.dll
+C:\Workspace\Mvc Core Northwind\mvc-core-northwind\NorthwindBackend\WebAPI\bin\Debug\netcoreapp3.1\runtimes\win\lib\netstandard2.0\System.Data.SqlClient.dll
+C:\Workspace\Mvc Core Northwind\mvc-core-northwind\NorthwindBackend\WebAPI\obj\Debug\netcoreapp3.1\WebAPI.MvcApplicationPartsAssemblyInfo.cache

@@ -5,6 +5,7 @@ using Castle.DynamicProxy;
 
 namespace Core.Utilities.Interceptors.Autofac
 {
+    //classların aspect olması için bu classı(MethodInterception) miras almaları lazım.
     public abstract class MethodInterception:MethodInterceptionBaseAttribute
     {
         //OnBefore -> Method çalışmadan önce sen çalış demek

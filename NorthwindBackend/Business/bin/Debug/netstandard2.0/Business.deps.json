@@ -31,6 +31,19 @@
           }
         }
       },
+      "Autofac.Extensions.DependencyInjection/6.0.0": {
+        "dependencies": {
+          "Autofac": "5.1.2",
+          "Microsoft.Bcl.AsyncInterfaces": "1.1.0",
+          "Microsoft.Extensions.DependencyInjection.Abstractions": "3.1.1"
+        },
+        "runtime": {
+          "lib/netstandard2.0/Autofac.Extensions.DependencyInjection.dll": {
+            "assemblyVersion": "6.0.0.0",
+            "fileVersion": "6.0.0.0"
+          }
+        }
+      },
       "Autofac.Extras.DynamicProxy/5.0.0": {
         "dependencies": {
           "Autofac": "5.1.2",
@@ -71,6 +84,14 @@
           "lib/netstandard2.0/FluentValidation.dll": {
             "assemblyVersion": "8.0.0.0",
             "fileVersion": "8.6.1.0"
+          }
+        }
+      },
+      "log4net/2.0.5": {
+        "runtime": {
+          "lib/net45-full/log4net.dll": {
+            "assemblyVersion": "1.2.15.0",
+            "fileVersion": "1.2.15.0"
           }
         }
       },
@@ -1466,12 +1487,14 @@
       },
       "Core/1.0.0": {
         "dependencies": {
+          "Autofac.Extensions.DependencyInjection": "6.0.0",
           "Autofac.Extras.DynamicProxy": "5.0.0",
           "FluentValidation": "8.6.1",
           "Microsoft.AspNetCore.Http": "2.2.2",
           "Microsoft.EntityFrameworkCore.SqlServer": "3.1.1",
           "Microsoft.IdentityModel.Tokens": "5.6.0",
-          "System.IdentityModel.Tokens.Jwt": "5.6.0"
+          "System.IdentityModel.Tokens.Jwt": "5.6.0",
+          "log4net": "2.0.5"
         },
         "runtime": {
           "Core.dll": {}
@@ -1510,6 +1533,13 @@
       "path": "autofac/5.1.2",
       "hashPath": "autofac.5.1.2.nupkg.sha512"
     },
+    "Autofac.Extensions.DependencyInjection/6.0.0": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-+1WNYENm4s/bSBrmTy2sD0zs6MCiCAlUaEbHJ+y7fKpXKqnFl4oTkIkUoDKlp05dl1VoAASBUJocaKKJa1KPCw==",
+      "path": "autofac.extensions.dependencyinjection/6.0.0",
+      "hashPath": "autofac.extensions.dependencyinjection.6.0.0.nupkg.sha512"
+    },
     "Autofac.Extras.DynamicProxy/5.0.0": {
       "type": "package",
       "serviceable": true,
@@ -1530,6 +1560,13 @@
       "sha512": "sha512-g0xw/YCVgJ1IYpBgKF9iuci/Arf6Dsq9H/WeeT9zaBpjrEA+Cr2GjWXHu1F0DKqVzp4J4hta4gGrRt6H4aESqQ==",
       "path": "fluentvalidation/8.6.1",
       "hashPath": "fluentvalidation.8.6.1.nupkg.sha512"
+    },
+    "log4net/2.0.5": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-AEqPZz+v+OikfnR2SqRVdQPnSaLq5y9Iz1CfRQZ9kTKPYCXHG6zYmDHb7wJotICpDLMr/JqokyjiqKAjUKp0ng==",
+      "path": "log4net/2.0.5",
+      "hashPath": "log4net.2.0.5.nupkg.sha512"
     },
     "Microsoft.AspNetCore.Http/2.2.2": {
       "type": "package",
