@@ -8,6 +8,7 @@ using Business.BusinessAspects.Autofac;
 using Business.Constants;
 using Business.ValidationRules.FluentValidation;
 using Core.Aspects.Autofac.Caching;
+using Core.Aspects.Autofac.Exception;
 using Core.Aspects.Autofac.Logging;
 using Core.Aspects.Autofac.Performance;
 using Core.Aspects.Autofac.Transaction;
@@ -36,10 +37,12 @@ namespace Business.Concrete
             return new SuccessDataResult<Product>(_productDal.Get(p => p.ProductId == productId));
         }
 
+        //eğer tepki verme süresi 5 saniye'yi geçerse PerformanceAspect'i çalıştır.
         [PerformanceAspect(5)]
         public IDataResult<List<Product>> GetList()
         {
-            Thread.Sleep(5000);
+            //PerformanceAspect'in çalışmasını görmek için methodun 5 saniye sonra çalışmasını söyledik.
+            //Thread.Sleep(5000);
             return new SuccessDataResult<List<Product>>(_productDal.GetList().ToList());
         }
 

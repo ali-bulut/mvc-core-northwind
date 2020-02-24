@@ -46,3 +46,28 @@
     ]
   }
 }
+{
+  "Message": {
+    "MethodName": "GetListByCategory",
+    "LogParameters": [
+      {
+        "Name": "categoryId",
+        "Value": 4,
+        "Type": "Int32"
+      }
+    ]
+  }
+}
+{
+  "Message": {
+    "ExceptionMessage": "Cannot open database \"Northwindd\" requested by the login. The login failed.\r\nLogin failed for user 'LAPTOP-85QR8KR2\\Ali'.",
+    "MethodName": "GetListByCategory",
+    "LogParameters": [
+      {
+        "Name": "categoryId",
+        "Value": 4,
+        "Type": "Int32"
+      }
+    ]
+  }
+}

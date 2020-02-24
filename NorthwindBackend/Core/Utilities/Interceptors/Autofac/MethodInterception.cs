@@ -13,7 +13,7 @@ namespace Core.Utilities.Interceptors.Autofac
         //OnAfter -> Method çalıştıktan sonra sen çalış demek
         protected virtual void OnAfter(IInvocation invocation) { }
         //OnException -> Method hata verdiğinde sen çalış demek
-        protected virtual void OnException(IInvocation invocation) { }
+        protected virtual void OnException(IInvocation invocation, System.Exception e) { }
         //OnSuccess -> Method başarılıysa sen çalış demek
         protected virtual void OnSuccess(IInvocation invocation) { }
 
@@ -27,10 +27,10 @@ namespace Core.Utilities.Interceptors.Autofac
                 //invocation methodunu çalıştır demek.
                 invocation.Proceed();
             }
-            catch (Exception)
+            catch (Exception e)
             {
                 isSuccess = false;
-                OnException(invocation);
+                OnException(invocation,e);
                 throw;
             }
             finally
