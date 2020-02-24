@@ -71,6 +71,8 @@ namespace WebAPI
                 app.UseDeveloperExceptionPage();
             }
 
+            app.ConfigureCustomExceptionMiddleware();
+
             //header demek get post pull gibi http istekleridir.
             app.UseCors(builder => builder.WithOrigins("http://localhost:3000").AllowAnyHeader());
 
