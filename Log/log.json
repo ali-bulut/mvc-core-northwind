@@ -1,0 +1,138 @@
+{
+  "Message": {
+    "MethodName": "GetListByCategory",
+    "LogParameters": [
+      {
+        "Name": "categoryId",
+        "Value": 1,
+        "Type": "Int32"
+      }
+    ]
+  }
+}
+{
+  "Message": {
+    "MethodName": "GetListByCategory",
+    "LogParameters": [
+      {
+        "Name": "categoryId",
+        "Value": 2,
+        "Type": "Int32"
+      }
+    ]
+  }
+}
+{
+  "Message": {
+    "MethodName": "GetListByCategory",
+    "LogParameters": [
+      {
+        "Name": "categoryId",
+        "Value": 4,
+        "Type": "Int32"
+      }
+    ]
+  }
+}
+{
+  "Message": {
+    "MethodName": "GetListByCategory",
+    "LogParameters": [
+      {
+        "Name": "categoryId",
+        "Value": 4,
+        "Type": "Int32"
+      }
+    ]
+  }
+}
+{
+  "Message": {
+    "MethodName": "GetListByCategory",
+    "LogParameters": [
+      {
+        "Name": "categoryId",
+        "Value": 4,
+        "Type": "Int32"
+      }
+    ]
+  }
+}
+{
+  "Message": {
+    "ExceptionMessage": "Cannot open database \"Northwindd\" requested by the login. The login failed.\r\nLogin failed for user 'LAPTOP-85QR8KR2\\Ali'.",
+    "MethodName": "GetListByCategory",
+    "LogParameters": [
+      {
+        "Name": "categoryId",
+        "Value": 4,
+        "Type": "Int32"
+      }
+    ]
+  }
+}
+{
+  "Message": {
+    "MethodName": "GetListByCategory",
+    "LogParameters": [
+      {
+        "Name": "categoryId",
+        "Value": 4,
+        "Type": "Int32"
+      }
+    ]
+  }
+}
+{
+  "Message": {
+    "ExceptionMessage": "Cannot open database \"Northwindd\" requested by the login. The login failed.\r\nLogin failed for user 'LAPTOP-85QR8KR2\\Ali'.",
+    "MethodName": "GetListByCategory",
+    "LogParameters": [
+      {
+        "Name": "categoryId",
+        "Value": 4,
+        "Type": "Int32"
+      }
+    ]
+  }
+}
+{
+  "Message": {
+    "ExceptionMessage": "Validation failed: \r\n -- UnitPrice: 'Unit Price' must be greater than or equal to '10'.",
+    "MethodName": "Add",
+    "LogParameters": [
+      {
+        "Name": "product",
+        "Value": {
+          "ProductId": 0,
+          "ProductName": "Test",
+          "CategoryId": 1,
+          "QuantityPerUnit": null,
+          "UnitPrice": 1.0,
+          "UnitsInStock": 0
+        },
+        "Type": "Product"
+      }
+    ]
+  }
+}
+{
+  "Message": {
+    "ExceptionMessage": "Validation failed: \r\n -- UnitPrice: 'Unit Price' must not be empty.\r\n -- UnitPrice: 'Unit Price' must be greater than or equal to '1'.",
+    "MethodName": "Add",
+    "LogParameters": [
+      {
+        "Name": "product",
+        "Value": {
+          "ProductId": 0,
+          "ProductName": "Test",
+          "CategoryId": 0,
+          "QuantityPerUnit": null,
+          "UnitPrice": 0.0,
+          "UnitsInStock": 0
+        },
+        "Type": "Product"
+      }
+    ]
+  }
+}
